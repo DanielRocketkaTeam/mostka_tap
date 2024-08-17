@@ -33,8 +33,6 @@ $circle.addEventListener('click', (event) => {
     $circle.style.setProperty('--tiltX', `${tiltX}deg` )
     $circle.style.setProperty('--tiltY', `${tiltY}deg` )
 
-    window.navigator.vibrate(100);
-
     setTimeout(() => {
         $circle.style.setProperty('--tiltX', `0deg` )
         $circle.style.setProperty('--tiltY', `0deg` )
@@ -49,6 +47,10 @@ $circle.addEventListener('click', (event) => {
     $circle.parentElement.appendChild(plusOne)
 
     addOne()
+
+    if (navigator.vibrate) {
+        navigator.vibrate(100);
+    }
 
     setTimeout(() => {
         plusOne.remove()
