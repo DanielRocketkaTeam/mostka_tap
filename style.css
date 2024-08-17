@@ -10,18 +10,21 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, #00224A, #347ACD);
+    user-select: none;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 .header img{
     width: 60px;
     height: 60px;
     margin-right: 14px;
+    user-select: none;
 }
 
 .score{
